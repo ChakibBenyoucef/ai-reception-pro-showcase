@@ -1,0 +1,1 @@
+Ajouter uniquement des captures anonymisees des interfaces Admin et Client. Ne pas inclure de donnees reelles ni de secrets.
