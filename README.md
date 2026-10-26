@@ -1,59 +1,165 @@
-# AI Reception Pro V18
-### Business reception, appointments and customer management — Android & Web
+# 🤖 AI Reception Pro V18
 
-**Projet vitrine / Portfolio showcase — Code source commercial privé**
+AI-powered digital reception and appointment management platform for businesses and their clients.
 
-AI Reception Pro est une solution de réception numérique avec deux expériences distinctes : une interface **Administrateur** pour gérer l'activité et une interface **Client** pour accéder aux services proposés. Le projet est développé avec **Angular 19, Ionic 8, Capacitor 7**, et un backend **Python / SQLite**.
+AI Reception Pro brings appointment scheduling, customer management, AI-assisted reception, communication and administration into a unified experience, with dedicated **Administrator** and **Client** interfaces.
 
-> **Statut :** démonstration de projet et présentation commerciale. Le dépôt public ne contient ni le code source intégral, ni les clés, ni les bases de données, ni les fichiers d'installation destinés aux acheteurs. Le déploiement autonome chez un acheteur reste à valider.
+**Angular 19 · TypeScript · Ionic 8 · Capacitor 7 · Python · SQLite · Android**
 
-## Fonctionnalités présentées
+---
 
-| Interface Admin | Interface Client |
+## Application Preview
+
+Explore the main workflows through real application screenshots. Demo data is shown; sensitive contact details and invitation links are obscured.
+
+### Administrator Workspace
+
+| Dashboard | Services | Business Settings |
+|---|---|---|
+| [![Dashboard](screenshots/dashboard.webp)](screenshots/dashboard.webp) | [![Services](screenshots/services.webp)](screenshots/services.webp) | [![Settings](screenshots/settings.webp)](screenshots/settings.webp) |
+
+| Client Directory | Notifications | Professional Messaging |
+|---|---|---|
+| [![Clients](screenshots/client-directory.webp)](screenshots/client-directory.webp) | [![Notifications](screenshots/notifications.webp)](screenshots/notifications.webp) | [![Professional email](screenshots/professional-email.webp)](screenshots/professional-email.webp) |
+
+### Client Experience
+
+| Account Activation | Client Profile | Invitation Email |
+|---|---|---|
+| [![Activation](screenshots/activation.webp)](screenshots/activation.webp) | [![Profile](screenshots/profile.webp)](screenshots/profile.webp) | [![Invitation](screenshots/invitation-email.webp)](screenshots/invitation-email.webp) |
+
+### AI & Communication
+
+| AI Assistant | Private Messages | Audio Call |
+|---|---|---|
+| [![Assistant](screenshots/ai-assistant.webp)](screenshots/ai-assistant.webp) | [![Messages](screenshots/private-messages.webp)](screenshots/private-messages.webp) | [![Call](screenshots/audio-call.webp)](screenshots/audio-call.webp) |
+
+| Incoming Call | Call History & Recording |
 |---|---|
-| Tableau de bord / vue d'ensemble | Réservation de rendez-vous |
-| Agenda et demandes de rendez-vous | Consultation de ses rendez-vous |
-| Gestion des clients et prestations | Assistant vocal IA (selon configuration) |
-| Assistant vocal IA et historique | Accès aux fonctions autorisées du compte |
-| Appels audio/vidéo, messagerie, emails | Expérience Android dédiée |
-| Paramètres et support | |
+| [![Incoming call](screenshots/incoming-call.webp)](screenshots/incoming-call.webp) | [![Call history](screenshots/call-history.webp)](screenshots/call-history.webp) |
 
-Certaines fonctionnalités nécessitent un serveur, une configuration et des services tiers. Leur disponibilité dépend de l'environnement déployé.
+---
 
-## Architecture générale
+## Overview
 
-```mermaid
-flowchart TB
-    A[Application Admin Android / Web] --> API[API backend Python]
-    C[Application Client Android / Web] --> API
-    API --> DB[(SQLite)]
-    API --> EXT[Services externes configurables : IA / Email]
+AI Reception Pro is designed to simplify daily reception activities, appointment organization and customer interactions. It combines a business management workspace with a dedicated client experience accessible through Android applications.
+
+### Core Capabilities
+
+- Administrator dashboard and business overview
+- Appointment calendar and booking request management
+- Customer and service management
+- Client appointment booking and appointment history
+- AI voice assistant and conversation history
+- Audio and video communication interfaces
+- Private messaging and professional email management
+- Application settings and support
+- Dedicated Administrator and Client Android applications
+- Responsive interface and multilingual functionality
+
+---
+
+## Administrator Dashboard
+
+The administrator workspace centralizes access to the main business modules and day-to-day reception activities.
+
+---
+
+## Appointments & Calendar
+
+The scheduling interface helps administrators organize appointments, review requests and manage booking workflows.
+
+---
+
+## Customer & Service Management
+
+Dedicated interfaces provide customer records and service organization within the administration workspace.
+
+---
+
+## AI Reception Assistant
+
+An AI-oriented reception interface supports conversational interactions. Conversation history can be accessed through a dedicated administration section. Available AI functionality depends on the configured environment and services.
+
+---
+
+## Communication
+
+AI Reception Pro includes interfaces for audio/video calls, private messaging and professional email workflows.
+
+---
+
+## Client Application
+
+The dedicated Client experience provides appointment booking, appointment consultation and access to supported assistant functionality.
+
+---
+
+## Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | Angular 19, TypeScript, Ionic 8, RxJS |
+| Mobile | Capacitor 7, Android |
+| Backend | Python API |
+| Database | SQLite |
+| Integrations | Configurable AI, messaging and email services |
+
+---
+
+## Architecture
+
+```text
+Administrator Application       Client Application
+        |                               |
+        +---------------+---------------+
+                        |
+                 Python Backend API
+                        |
+                    SQLite
+                        |
+          Configurable external services
 ```
 
-**Technologies :** Angular 19 · Ionic 8 · Capacitor 7 · TypeScript · Python · SQLite · Android / Gradle.
+The Angular/Ionic applications communicate with the Python backend, which provides business logic and persistence. Mobile distribution uses Capacitor and separate Android variants.
 
-## Aperçus
+---
 
-Les captures d'écran seront ajoutées après vérification et anonymisation. Aucun compte réel, donnée client, URL privée ou secret ne doit apparaître dans les images.
+## Security
 
-| Admin | Client |
-|---|---|
-| Capture à ajouter | Capture à ajouter |
+The application includes authentication and distinct Administrator/Client experiences. Deployment configuration, access controls, data isolation and security should be assessed for each environment. Credentials and user data are not included in this public showcase.
 
-## Vente / Commercial licensing
+---
 
-Le **code source complet peut être proposé sous contrat commercial**, avec les variantes Admin/Client et la documentation utilisateur, installation et architecture (FR/EN). Les conditions, le périmètre de livraison, le prix, la propriété intellectuelle et le support doivent être définis par écrit avant toute vente.
+## Responsive Design & Mobile Experience
 
-**Le code source n'est pas public.** Aucune licence open source n'est accordée par ce dépôt. Pour une démonstration ou une demande commerciale, utiliser les coordonnées professionnelles communiquées séparément par le vendeur.
+The interfaces are designed for modern web and Android usage, with dedicated navigation for the Administrator and Client experiences.
 
-## Documentation
+---
 
-- [Présentation technique / Technical overview](docs/ARCHITECTURE.md)
-- [Périmètre de la livraison commerciale / Commercial delivery scope](docs/COMMERCIAL_SCOPE.md)
-- [English overview](docs/README_EN.md)
+## Project Status
 
-## Confidentialité et sécurité
+AI Reception Pro V18 is an actively developed application. The main reception, appointment, customer management and communication modules are represented in the project.
 
-Aucune clé privée Android, mot de passe, base de données client ou configuration de production n'est fournie dans ce dépôt. Les droits des bibliothèques tierces et la conformité du déploiement doivent être vérifiés avant commercialisation.
+---
 
-© 2026 AI Reception Pro. Tous droits réservés, sous réserve des droits des tiers.
+## Source Code
+
+This repository is a public showcase of AI Reception Pro, intended to present the project, its architecture and its main features.
+
+The complete application source code is maintained privately.
+
+Source code can be made available on request for professional review or recruitment purposes.
+
+---
+
+## Author
+
+**Chakib B.**  
+Software Developer
+
+Designed and developed across frontend, backend, database integration, Android application development and deployment.
+
+---
+
+© 2026 AI Reception Pro
